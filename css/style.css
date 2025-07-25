@@ -531,7 +531,14 @@ main {
 }
 
 /* .pricing-section  */
-
+.pricing-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1200px;
+}
 .pricing-table {
   margin: 0;
   font-size: 1rem;
