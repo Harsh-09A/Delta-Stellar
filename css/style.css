@@ -1095,6 +1095,7 @@ figure.snip1113 h4 {
   color: var(--colorPrimary);
   margin-bottom: 5px;
   text-align: left !important;
+  text-transform: uppercase;
 }
 
 .location-distance {
@@ -1110,7 +1111,7 @@ figure.snip1113 h4 {
 }
 
 .time-badge {
-  background-color: var(--light-color);
+  background-color: var(--bg-color);
   border-radius: 30px;
   padding: 5px 15px;
   font-size: 0.85rem;
