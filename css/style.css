@@ -532,37 +532,171 @@ main {
 
 /* .pricing-section  */
 
-.pricing-card {
+.pricing-table {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.pricing-table th {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  font-weight: 600;
   text-align: center;
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 20px 15px;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.pricing-table td {
+  padding: 20px 15px;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.pricing-table tbody tr:hover {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-  background-color: white;
-  height: 100%;
 }
 
-.pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.space-type {
+  font-weight: 600;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.pricing-card h3 {
+.space-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.ground-floor .space-icon {
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: linear-gradient(
+    135deg,
+    var(--colorSecondary) 0%,
+    var(--tertiary-color) 100%
+  );
+}
+
+.ground-floor {
+  text-align: left;
+}
+
+.area-range {
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--colorPrimary);
-  font-feature-settings: "lnum";
+  color: #2c3e50;
 }
 
-.pricing-card .price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--colorTertiary);
-  margin-bottom: 1rem;
+.area-unit {
+  font-size: 0.9rem;
+  color: #6c757d;
+  display: block;
+  margin-top: 5px;
 }
 
-.pricing-card .features {
-  margin-bottom: 1.5rem;
+.btn-inquire {
+  background: linear-gradient(
+    135deg,
+    var(--colorSecondary) 0%,
+    var(--tertiary-color) 100%
+  );
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-inquire:hover {
+  transform: translateY(-2px);
+  /* box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); */
+  box-shadow: 0 5px 15px rgba(169, 142, 78, 0.4);
+
+  color: white;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .pricing-table {
+    font-size: 0.9rem;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 15px 10px;
+  }
+
+  .space-type {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .space-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .area-range {
+    font-size: 1rem;
+  }
+
+  .table-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .table-header p {
+    font-size: 1rem;
+  }
+
+  .btn-inquire {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-container {
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .table-header {
+    padding: 20px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 12px 8px;
+  }
+
+  .area-range {
+    font-size: 0.95rem;
+  }
 }
 
 /* amenities */
@@ -600,10 +734,14 @@ figure.snip1113 img {
   display: block;
   position: relative;
   border: 3px solid var(--colorSecondary);
-  padding: 15px 15px 65px 15px;
+  /* padding: 15px 15px 65px 15px; */
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
-  border-radius: 20px;
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -ms-border-radius: 20px !important;
+  -o-border-radius: 20px !important;
 }
 
 figure.snip1113 figcaption {
@@ -621,7 +759,7 @@ figure.snip1113 h3 {
   font-size: 1.2em;
   width: 100%;
   padding: 5px 12px;
-  margin: 0;
+
   text-transform: uppercase;
   font-weight: 400;
 }
