@@ -283,7 +283,7 @@ main {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -296,6 +296,10 @@ main {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .highlight-card::before {
@@ -511,7 +515,7 @@ main {
 }
 
 .gall {
-  border: 2px solid var(--colorPrimary);
+  border: 3px dotted var(--colorPrimary);
   border-radius: 20px;
   padding: 7px;
   background-color: #f1f1f1;
